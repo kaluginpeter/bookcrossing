@@ -1,41 +1,8 @@
-<!DOCTYPE html>
-<html lang="ru">
+{% extends 'base.html' %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BookCrossing - О проекте</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../project_static/css/styles.css">
-</head>
+{% block title %}BookCrossing - О проекте{% endblock %}
 
-<body>
-  <header>
-    <!-- Navigation Menu -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="../catalog/index.html">
-        <img src="../../project_static/img/logo.png" alt="BookCrossing" width="50">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../catalog/index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">О проекте</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../catalog/categories.html">Категории</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
+{% block content %}
   <div class="container mt-5">
     <h1>О проекте</h1>
     <p>Добро пожаловать в нашу онлайн-платформу обмена книгами — Букроссинг!
@@ -52,16 +19,5 @@
 
 Присоединяйтесь к Букроссингу сегодня и откройте для себя новые горизонты чтения!</p>
   </div>
-
-  <footer class="bg-light mt-5 py-3">
-    <div class="container text-center">
-      <span>&copy; 2023 BookCrossing</span>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+{% endblock %}
 
