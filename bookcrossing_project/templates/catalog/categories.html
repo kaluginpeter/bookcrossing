@@ -1,26 +1,27 @@
-{% extends 'base.html '%}
+{% extends 'base.html ' %}
 
 {% load static %}
 
 {% block title %}BookCrossing - Информация о категориях{% endblock title %}
 
 {% block content %}
-  <div class="container mt-5">
-    <h1>Информация о категориях</h1>
-      {% for category in categories %}
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card mb-4">
-          <div class="card-body">
-            <h5 class="card-title">Имя категории: {{ category.name }}</h5>
-            <p class="card-text">Описание: {{ category.description }}</p>
-            <p class="card-text">Книг в категории: {{ category.books_count }}</p>
-            <a href="{% url 'catalog:category_detail_view' category.name %}" class="btn btn-primary">Просмотреть</a>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-      <!-- Repeat the above card section for each category dynamically -->
+    <div class="container mt-5">
+        <h1>Информация о категориях</h1>
+        {% for category in categories %}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Имя категории: {{ category.name }}</h5>
+                            <p class="card-text">Описание: {{ category.description }}</p>
+                            <p class="card-text">Книг в категории: {{ category.books_count }}</p>
+                            <a href="{% url 'catalog:category_detail_view' category.name %}" class="btn btn-primary">Просмотреть</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        <!-- Repeat the above card section for each category dynamically -->
+
     </div>
-  </div>
 {% endblock content %}
