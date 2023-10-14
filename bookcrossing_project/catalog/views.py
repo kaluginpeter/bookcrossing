@@ -1,5 +1,6 @@
 from data import BOOKS, CATEGORIES
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+
 
 def index_view(request):
     context = {'books': BOOKS}
@@ -23,4 +24,4 @@ def book_detail_view(request, id):
             context = {'book': book}
             return render(request, template_name='catalog/book.html', context={'book':book})
     # Реализовать проверку на отсутсвие книги по id
-    return render(request, template_name='catalog/index.html', context=context)
+    return redirect('/')
